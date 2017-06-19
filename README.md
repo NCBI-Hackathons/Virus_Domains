@@ -5,6 +5,12 @@ VIROME_SNIFF is a pipeline that searches Next Generation Sequencing reads using 
 This tool finds already known viral sequences and viruses-like proteins and discovers knew Viral Protein Domains in any single genome or metagenome sequence pool. 
 
 
+#WORKFLOW
+1. Detecting NGS sequences for virus using NCBI magicBLAST/k-mers
+2. Assemble matched reads
+3. Detect 
+
+
 
 git clone https://github.com/NCBI-Hackathons/Virus_Domains
 
@@ -39,6 +45,15 @@ Velvet v1.1.07. Provided in VirusDetect.
 NCBI BLAST package 2.2.16. Provided in VirusDetect.
 
 HISAT (for RNA-Seq datasets)
+
+
+
+#BASIC USAGE
+
+
+#OPTIONAL PARAMETERS
+
+
 
 
 
