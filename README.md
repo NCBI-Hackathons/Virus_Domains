@@ -25,7 +25,21 @@ Install the following:
 
 
 
-["cwltool (>= 1.0.20170309164828)
+Installing the following for detection: 
+
+Perl version 5.10.0 or higher. Perl is installed by default on most Linux systems
+BioPerl version 1.006 or higher. Please check http://www.bioperl.org and wiki/Installing_BioPerl for more details on installation of BioPerl.
+
+BWA 0.7.10. Provided in VirusDetect.
+
+SAMtools v0.1.18. Provided in VirusDetect.
+
+Velvet v1.1.07. Provided in VirusDetect.
+
+NCBI BLAST package 2.2.16. Provided in VirusDetect.
+
+HISAT (for RNA-Seq datasets)
+
 
 
 
