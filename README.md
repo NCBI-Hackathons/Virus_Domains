@@ -21,7 +21,7 @@ git clone https://github.com/NCBI-Hackathons/Virus_Domains
 Install the following:
 
 ["MMseq2"](https://github.com/soedinglab/MMseqs2)  
-["Spades release3.10.1"](http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
+["Spades 3.10.1"](http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
 
 
 ["cutadapt (>= 1.12)"](http://cutadapt.readthedocs.io/en/stable/installation.html)
@@ -29,15 +29,8 @@ Install the following:
 
 
 
-
-
-Installing the following for detection: 
-
-
-
-
-#Database containgn multiple differetnt viral sources: REF for viral sources 
-is build and stored here: 
+#Database containing multiple differetnt viral sequences compiled form Viral Zone DB, VPR and Viral Genomes
+is build and can be obtained from here: 
 
 
 BUILDING DATABASE
