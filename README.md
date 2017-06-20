@@ -27,14 +27,15 @@ Install the following:
 
 ["TrimGalore"] (https://github.com/FelixKrueger/TrimGalore)
 
-#Database containing multiple differetnt viral sequences compiled form Viral Zone DB, VPR and Viral Genomes
-is build with MMseq2 and can be obtained from here: 
+#Database containing multiple differetnt viral sequences compiled using MMseq2 from the following DB:
+
+Viral Zone DB (http://viralzone.expasy.org/)
+VPR (https://www.viprbrc.org/brc/home.spg?decorator=vipr)
+Viral Genomes (https://www.ncbi.nlm.nih.gov/genome/viruses/)
 
 If a new database compatible with MMseq2 needs to be created the following commnads could be used: 
 
-#BUILDING DATABASE
-mmseqs createdb  virus_cluster.fasta MMSEQ_DB
-mmseqs createindex MMSEQ_DB
+
 
 
 # VIROME SNIFF
@@ -71,8 +72,20 @@ optional arguments:
 
 ## Sample Input Files
 - FASTQ File: [link](/test.cases/FASTQ_short_example.txt)
-- Barcode.csv: [link](barcodes_csv.txt)
-- sample_sheet.tab: [link](Sample_sheet.txt)
+
+
+## Building Database
+
+Database containing multiple differetnt viral sequences compiled using MMseq2 from the following DB:
+
+Viral Zone DB (http://viralzone.expasy.org/)
+VPR (https://www.viprbrc.org/brc/home.spg?decorator=vipr)
+Viral Genomes (https://www.ncbi.nlm.nih.gov/genome/viruses/)
+
+If a new database compatible with MMseq2 needs to be created the following commnads could be used: 
+mmseqs createdb  virus_cluster.fasta MMSEQ_DB
+mmseqs createindex MMSEQ_DB
+
 
 ## Software Dependencies
 
