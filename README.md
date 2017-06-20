@@ -75,7 +75,16 @@ optional arguments:
 - sample_sheet.tab: [link](Sample_sheet.txt)
 
 ## Software Dependencies
-- DASK (http://dask.pydata.org/en/latest/)
+
+The following software needs to be installed: 
+
+-sratoolkit (https://github.com/ncbi/sra-tools/)
+
+-MMseq2 (https://github.com/soedinglab/MMseqs2)  
+
+-Spades 3.10.1 (http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
+
+-TrimGalore (https://github.com/FelixKrueger/TrimGalore)
 
 
 
