@@ -19,11 +19,9 @@ git clone https://github.com/NCBI-Hackathons/Virus_Domains
 
 Install the following:
 
-["magicblast (>= 1.2.0)"](https://ftp.ncbi.nlm.nih.gov/blast/executables/magicblast/LATEST)  
+["MMseq2"](https://github.com/soedinglab/MMseqs2)  
 
-["samtools (>= 1.4)"](http://samtools.sourceforge.net/)
 
-["bioperl (>= 1.7)"](http://search.cpan.org/~cjfields/BioPerl-1.007001/BioPerl.pm)
 
 ["cutadapt (>= 1.12)"](http://cutadapt.readthedocs.io/en/stable/installation.html)
 
@@ -31,24 +29,23 @@ Install the following:
 
 
 
+
 Installing the following for detection: 
 
-Perl version 5.10.0 or higher. Perl is installed by default on most Linux systems
-BioPerl version 1.006 or higher. Please check http://www.bioperl.org and wiki/Installing_BioPerl for more details on installation of BioPerl.
 
-BWA 0.7.10. Provided in VirusDetect.
 
-SAMtools v0.1.18. Provided in VirusDetect.
 
-Velvet v1.1.07. Provided in VirusDetect.
+#Database containgn multiple differetnt viral sources: REF for viral sources 
+is build and stored here: 
 
-NCBI BLAST package 2.2.16. Provided in VirusDetect.
 
-HISAT (for RNA-Seq datasets)
+BUILDING DATABASE
 
 
 
 #BASIC USAGE
+
+
 
 
 #OPTIONAL PARAMETERS
