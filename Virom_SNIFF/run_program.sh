@@ -82,7 +82,7 @@ do
 
 	#parse results and make new fasta with contigs with no hits and below threshold tblastx hits
 
-	#do CD search using Hammer search
+	#do CD search using Hmmer search
 
 	rm $data/sra/$LINE.sra
 	rm $LINE.fastq
