@@ -6,9 +6,10 @@ This tool finds already known viral sequences and viruses-like proteins and disc
 
 
 #WORKFLOW
-1. Detecting NGS sequences for virus using NCBI magicBLAST/k-mers
-2. Assemble matched reads
-3. Detect 
+1. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protin detection
+2. Assemble matched reads using Abyss
+3. Characterize known sequences and their aboundaces
+4. 
 
 
 
