@@ -9,8 +9,7 @@ This tool finds already known viral sequences and viruses-like proteins and disc
 1. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protin detection
 2. Assemble matched reads using Abyss
 3. Characterize known sequences and their aboundaces
-4. 
-
+4. Visuaize viral content, taxonomy and geographical origin 
 
 
 git clone https://github.com/NCBI-Hackathons/Virus_Domains
@@ -20,28 +19,22 @@ git clone https://github.com/NCBI-Hackathons/Virus_Domains
 
 Install the following:
 
+["sratoolkit.2.8.2-1"] (https://github.com/ncbi/sra-tools/wiki/Downloads)
+
 ["MMseq2"](https://github.com/soedinglab/MMseqs2)  
 
+["Spades 3.10.1"](http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
 
+["TrimGalore"] (https://github.com/FelixKrueger/TrimGalore)
 
-["cutadapt (>= 1.12)"](http://cutadapt.readthedocs.io/en/stable/installation.html)
+#Database containing multiple differetnt viral sequences compiled form Viral Zone DB, VPR and Viral Genomes
+is build with MMseq2 and can be obtained from here: 
 
-["abyss (>= 2.0.2)"](https://github.com/bcgsc/abyss)
+If a new database compatible with MMseq2 needs to be created the following commnads could be used: 
 
-
-
-
-Installing the following for detection: 
-
-
-
-
-#Database containgn multiple differetnt viral sources: REF for viral sources 
-is build and stored here: 
-
-
-BUILDING DATABASE
-
+#BUILDING DATABASE
+mmseqs createdb  virus_cluster.fasta MMSEQ_DB
+mmseqs createindex MMSEQ_DB
 
 
 #BASIC USAGE
@@ -49,7 +42,10 @@ BUILDING DATABASE
 
 
 
+
 #OPTIONAL PARAMETERS
+
+
 
 
 
