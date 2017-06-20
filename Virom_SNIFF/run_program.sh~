@@ -1,0 +1,24 @@
+data='/workdir'
+cd $data
+mkdir $data/results
+#> $data/start_log.txt
+
+data='/workdir'
+cd $data
+cat $data/RNA_seq_samples.txt | while read LINE
+do
+    if grep $LINE "$data/start_log.txt";then
+	:
+    else
+	echo $LINE >> $data/start_log.txt
+	prefetch -a "/opt/aspera/connect/bin/ascp|/opt/aspera/connect/etc/asperaweb_id_dsa.openssh" $LINE
+	wait
+	echo $LINE.sra downloaded
+	fastq-dump -split-spot -W -M 20 -I $data/sra/$LINE.sra
+	echo $LINE dumped
+	# map
+	bowtie2 -p 8 -x $data/vir_list_update $LINE.fastq | samtools view -hF 4 > $data/results/$LINE.sam
+	rm $data/sra/$LINE.sra
+	rm $LINE.fastq
+    fi
+    done
