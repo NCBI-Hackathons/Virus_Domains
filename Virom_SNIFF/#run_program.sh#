@@ -1,4 +1,4 @@
-#!/usr/bin/env
+q#!/usr/bin/env
 acc_file=$1
 
 data='/workdir'
@@ -57,12 +57,9 @@ do
 	#do adaptive adaptor trimming
 	trim_galore -q -lenght $LINE.fastq
 	# do enrichment for viral like sequences
-	mmseqs createdb $LINE.fastq $LINE.DNAdb
-	mmseqs translatenucs $LINE.DNAdb $LINE.PROdb
-	mmseqs search  $LINE.PROdb MMSEQ_DB $LINE.RESULTdb MMseq_tmp
-	mmseqs convertalis $LINE.PROdb MMSEQ_DB $LINE.RESULTdb $LINE.blastp
-	cut -f1  $LINE.blastp | uniq > $LINE.id
-	grep -A 3 -Ff $LINE.id $LINE.fastq | sed '/--/d' > $LINE_'virus'.fastq
+	MMSeq2
+
+
 
 	#take MMSeq2 output and do de novo assembly using spades
 
