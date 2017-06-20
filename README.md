@@ -21,12 +21,12 @@ git clone https://github.com/NCBI-Hackathons/Virus_Domains
 Install the following:
 
 ["MMseq2"](https://github.com/soedinglab/MMseqs2)  
-
+["Spades release3.10.1"](http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
 
 
 ["cutadapt (>= 1.12)"](http://cutadapt.readthedocs.io/en/stable/installation.html)
 
-["abyss (>= 2.0.2)"](https://github.com/bcgsc/abyss)
+
 
 
 
