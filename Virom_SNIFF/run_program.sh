@@ -22,7 +22,12 @@ do
 	echo $LINE dumped
 	trim_galore -q -lenght $LINE.fastq
 	# map
-	MMSeq2
+	mmseqs createdb $LINE.fastq $LINE.DNAdb
+        mmseqs translatenucs $LINE.DNAdb $LINE.PROdb
+        mmseqs search  $LINE.PROdb MMSEQ_DB $LINE.RESULTdb MMseq_tmp
+        mmseqs convertalis $LINE.PROdb MMSEQ_DB $LINE.RESULTdb $LINE.blastp
+        cut -f1  $LINE.blastp | uniq > $LINE.id
+        grep -A 3 -Ff $LINE.id $LINE.fastq | sed '/--/d' > $LINE_'virus'.fastq
 	rm $data/sra/$LINE.sra
 	rm $LINE.fastq
     fi
