@@ -18,13 +18,12 @@ git clone https://github.com/NCBI-Hackathons/Virus_Domains
 # Dependencies
 
 Install the following:
+
 ["sratoolkit.2.8.2-1"] (https://github.com/ncbi/sra-tools/wiki/Downloads)
+
 ["MMseq2"](https://github.com/soedinglab/MMseqs2)  
+
 ["Spades 3.10.1"](http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
-
-
-["cutadapt (>= 1.12)"](http://cutadapt.readthedocs.io/en/stable/installation.html)
-
 
 ["TrimGalore"] (https://github.com/FelixKrueger/TrimGalore)
 
