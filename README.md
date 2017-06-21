@@ -1,9 +1,23 @@
-# Virus_Domains
-A NYGC Hackathon Project to Discover and Leverage New Viral Protein Domains
+
+--------------------------------------
+
 
 # VIROME SNIFF
 A NCBI Hackathon Project Generating a Pipeline that searches Next Generation Sequencing reads using virus protein database. 
 This tool finds already known viral sequences and viruses-like proteins and discovers sequences that match Viral Protein Domains in any single genome or metagenome sequence pool. Initial development took place at New York Genome Center, June 19-21, 2017.
+=================================================================
+
+
+* [Introduction](#Introduction)
+* [Command Line Interface Usage](#Command Line Interface Usage)
+* [Workflow schematics](#Workflow schematics)
+* [Sample Input Files](#Sample Input Files)
+* [Building Database](#Building Database)
+* [Sample Input Files](#Software Dependencies)
+* [Resources and references](#Resources-and-references) 
+ 
+--------------------------------------
+
 
 ## Introduction
 We aimed to search for viruses in protein, rather than nucleotide space in order to capture and caracterize larger number of viruses and detec virus- associated domains in the sample.  
@@ -25,7 +39,7 @@ optional arguments:
   -e E-value, --provide optiaonal trashold for blast, deafualt values are .....
 ```
 
-## WORKFLOW SCHEMATICS 
+## Workflow schematics 
 1. Building viral protein database
 1. Trimming sequences for adapter 
 2. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protein detection
@@ -43,7 +57,7 @@ optional arguments:
 ## Building Database
 This is an optional step. We build a Database containing multiple differetnt viral sequences by combining three databases using MMseq2.
 
-Databases used in our final database
+Databases used to create our final database
 
 Viral Zone DB (http://viralzone.expasy.org/)
 
@@ -62,12 +76,13 @@ The following software needs to be installed:
 
 -sratoolkit (https://github.com/ncbi/sra-tools/)
 
+-TrimGalore (https://github.com/FelixKrueger/TrimGalore)
+
 -MMseq2 (https://github.com/soedinglab/MMseqs2)  
 
 -Spades 3.10.1 (http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
 
--TrimGalore (https://github.com/FelixKrueger/TrimGalore)
 
+## Resources and references
 
-
-
+* [How to use/run a Docker image](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/Docker.md)
