@@ -50,21 +50,16 @@ Once we have taken in any Illumina base next generatin sequenceing datasets (and
 
 ## Command Line Interface Usage
 ```
-usage: Barcodes.py [-h] -f FORWARD FASTQ [-r REVERSE FASTQ] -s SAMPLE SHEET -b
+usage: run_program.sh [-h] -f FASTQ [-r REVERSE FASTQ] -s SAMPLE SHEET -b
                    BARCODES [-e ERROR RATE]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -f FORWARD FASTQ, --forward-fastq FORWARD FASTQ
-                        Provide the forward or single-end FASTQ file
-  -r REVERSE FASTQ, --reverse-fastq REVERSE FASTQ
-                        Provide the reverse FASTQ file [optional]
-  -s SAMPLE SHEET, --sample-sheet SAMPLE SHEET
+  -f FASTQ, --Provide single-end, paire-end FASTQ file
+  -s SRA, --sample-sheet SAMPLE SHEET
                         Sample table
-  -b BARCODES, --barcodes BARCODES
-                        Barcodes CSV file
-  -e ERROR RATE, --error-rate ERROR RATE
-                        Barcodes error rate, defaults to '2'
+ 
+  -e E-value, --provide optiaonal trashold for blast, deafualt values are .....
 ```
 
 ## Project Architecture
