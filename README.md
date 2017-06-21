@@ -10,11 +10,11 @@ This tool finds already known viral sequences and viruses-like proteins and disc
 
 * [Command Line Interface Usage](#Command-Line-Interface-Usage)
 
-* [Workflow schematics](#Workflow schematics)
+* [Workflow schematics](#Workflow-schematics)
 
-* [Sample Input Files](#Sample Input Files)
-* [Building Database](#Building Database)
-* [Sample Input Files](#Software Dependencies)
+* [Sample Input Files](#Sample-Input-Files)
+* [Building Database](#Building-Database)
+* [Sample Input Files](#Software-Dependencies)
 * [Resources and references](#Resources-and-references) 
  
 
@@ -25,7 +25,7 @@ We aimed to search for viruses in protein, rather than nucleotide space in order
 Once we have taken in any Illumina base next generatin sequenceing datasets (and performed adapter trimming), the workflow takes FASTQ data reads  where the input genomic data is matched directly against viaral protein database in order to filter out all the other sequnces that ae not related to viruses. The workflow further takes virus- related seqeunces and an assembly of those reads is performed. All the contigs that we sucessfuly assebled are furhter characterzed into known virus proteins, homologous virus proteins, and as virus protein domains. Know and homologus virus proteins are quntified and plotted, and taxonomical clasification of those sequences is provided. Finally, samples geographical distribution and representaiton can be plotted on the map. 
 
 
-## Command Line Interface Usage
+# Command Line Interface Usage
 ```
 usage: run_program.sh [-h] -f FASTQ [-r REVERSE FASTQ] -s SAMPLE SHEET -b
                    BARCODES [-e ERROR RATE]
