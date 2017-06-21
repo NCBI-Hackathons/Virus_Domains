@@ -5,11 +5,6 @@ VIROME_SNIFF is a pipeline that searches Next Generation Sequencing reads using 
 This tool finds already known viral sequences and viruses-like proteins and discovers knew Viral Protein Domains in any single genome or metagenome sequence pool. 
 
 
-#WORKFLOW
-1. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protin detection
-2. Assemble matched reads using Abyss
-3. Characterize known sequences and their aboundaces
-4. Visuaize viral content, taxonomy and geographical origin 
 
 
 git clone https://github.com/NCBI-Hackathons/Virus_Domains
@@ -62,7 +57,15 @@ optional arguments:
   -e E-value, --provide optiaonal trashold for blast, deafualt values are .....
 ```
 
-## Project Architecture
+## WORKFLOW SCHEMATICS 
+1. Building viral protein database
+1. Trimming sequences for adapter 
+2. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protein detection
+2. Assemble matched reads using Abyss
+3. Characterize known sequences and their aboundaces
+4. Visuaize viral content, taxonomy and geographical origin 
+
+
 ![alt text](https://i.imgur.com/JZrY1Yi.png) 
 
 ## Sample Input Files
@@ -70,9 +73,9 @@ optional arguments:
 
 
 ## Building Database
+This is an optional step. We build a Database containing multiple differetnt viral sequences by combining three databases using MMseq2.
 
-Database containing multiple differetnt viral sequences compiled using MMseq2 from the following DB:
-
+Databases used in our final database
 Viral Zone DB (http://viralzone.expasy.org/)
 VPR (https://www.viprbrc.org/brc/home.spg?decorator=vipr)
 Viral Genomes (https://www.ncbi.nlm.nih.gov/genome/viruses/)
