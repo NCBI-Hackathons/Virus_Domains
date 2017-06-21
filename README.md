@@ -41,8 +41,11 @@ optional arguments:
 This is an optional step. We build a Database containing multiple differetnt viral sequences by combining three databases using MMseq2.
 
 Databases used in our final database
+
 Viral Zone DB (http://viralzone.expasy.org/)
+
 VPR (https://www.viprbrc.org/brc/home.spg?decorator=vipr)
+
 Viral Genomes (https://www.ncbi.nlm.nih.gov/genome/viruses/)
 
 If a new database compatible with MMseq2 needs to be created the following commnads could be used: 
