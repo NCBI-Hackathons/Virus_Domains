@@ -5,11 +5,6 @@ VIROME_SNIFF is a pipeline that searches Next Generation Sequencing reads using 
 This tool finds already known viral sequences and viruses-like proteins and discovers knew Viral Protein Domains in any single genome or metagenome sequence pool. 
 
 
-#WORKFLOW
-1. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protin detection
-2. Assemble matched reads using Abyss
-3. Characterize known sequences and their aboundaces
-4. Visuaize viral content, taxonomy and geographical origin 
 
 
 git clone https://github.com/NCBI-Hackathons/Virus_Domains
@@ -27,14 +22,15 @@ Install the following:
 
 ["TrimGalore"] (https://github.com/FelixKrueger/TrimGalore)
 
-#Database containing multiple differetnt viral sequences compiled form Viral Zone DB, VPR and Viral Genomes
-is build with MMseq2 and can be obtained from here: 
+#Database containing multiple differetnt viral sequences compiled using MMseq2 from the following DB:
+
+Viral Zone DB (http://viralzone.expasy.org/)
+VPR (https://www.viprbrc.org/brc/home.spg?decorator=vipr)
+Viral Genomes (https://www.ncbi.nlm.nih.gov/genome/viruses/)
 
 If a new database compatible with MMseq2 needs to be created the following commnads could be used: 
 
-#BUILDING DATABASE
-mmseqs createdb  virus_cluster.fasta MMSEQ_DB
-mmseqs createindex MMSEQ_DB
+
 
 
 # VIROME SNIFF
@@ -49,33 +45,57 @@ Once we have taken in any Illumina base next generatin sequenceing datasets (and
 
 ## Command Line Interface Usage
 ```
-usage: Barcodes.py [-h] -f FORWARD FASTQ [-r REVERSE FASTQ] -s SAMPLE SHEET -b
+usage: run_program.sh [-h] -f FASTQ [-r REVERSE FASTQ] -s SAMPLE SHEET -b
                    BARCODES [-e ERROR RATE]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -f FORWARD FASTQ, --forward-fastq FORWARD FASTQ
-                        Provide the forward or single-end FASTQ file
-  -r REVERSE FASTQ, --reverse-fastq REVERSE FASTQ
-                        Provide the reverse FASTQ file [optional]
-  -s SAMPLE SHEET, --sample-sheet SAMPLE SHEET
+  -f FASTQ, --Provide single-end, paire-end FASTQ file
+  -s SRA, --sample-sheet SAMPLE SHEET
                         Sample table
-  -b BARCODES, --barcodes BARCODES
-                        Barcodes CSV file
-  -e ERROR RATE, --error-rate ERROR RATE
-                        Barcodes error rate, defaults to '2'
+ 
+  -e E-value, --provide optiaonal trashold for blast, deafualt values are .....
 ```
 
-## Project Architecture
+## WORKFLOW SCHEMATICS 
+1. Building viral protein database
+1. Trimming sequences for adapter 
+2. Detecting NGS sequences for virus using MMseq2 k-mer based algorithm for protein detection
+2. Assemble matched reads using Abyss
+3. Characterize known sequences and their aboundaces
+4. Visuaize viral content, taxonomy and geographical origin 
+
+
 ![alt text](https://i.imgur.com/JZrY1Yi.png) 
 
 ## Sample Input Files
 - FASTQ File: [link](/test.cases/FASTQ_short_example.txt)
-- Barcode.csv: [link](barcodes_csv.txt)
-- sample_sheet.tab: [link](Sample_sheet.txt)
+
+
+## Building Database
+This is an optional step. We build a Database containing multiple differetnt viral sequences by combining three databases using MMseq2.
+
+Databases used in our final database
+Viral Zone DB (http://viralzone.expasy.org/)
+VPR (https://www.viprbrc.org/brc/home.spg?decorator=vipr)
+Viral Genomes (https://www.ncbi.nlm.nih.gov/genome/viruses/)
+
+If a new database compatible with MMseq2 needs to be created the following commnads could be used: 
+mmseqs createdb  virus_cluster.fasta MMSEQ_DB
+mmseqs createindex MMSEQ_DB
+
 
 ## Software Dependencies
-- DASK (http://dask.pydata.org/en/latest/)
+
+The following software needs to be installed: 
+
+-sratoolkit (https://github.com/ncbi/sra-tools/)
+
+-MMseq2 (https://github.com/soedinglab/MMseqs2)  
+
+-Spades 3.10.1 (http://spades.bioinf.spbau.ru/release3.10.1/manual.html#sec2)
+
+-TrimGalore (https://github.com/FelixKrueger/TrimGalore)
 
 
 
