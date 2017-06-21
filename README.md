@@ -31,7 +31,9 @@ optional arguments:
 4. Visuaize viral content, taxonomy and geographical origin 
 
 
-![alt text](http://imgur.com/a/IYepT) 
+[Imgur](http://i.imgur.com/02j3NGx.jpg)) 
+
+![alt text]
 
 ## Sample Input Files
 - FASTQ File: [link](/test.cases/FASTQ_short_example.txt)
