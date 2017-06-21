@@ -9,3 +9,6 @@ sudo docker run --rm -it -v /$DATA_DIR:/$DOCKER_DATA_DIR biodckrdev/spades
 
 #MMSeq2
 
+### Docker tutorials: 
+
+* [How to use/run a Docker image](https://github.com/NCBI-Hackathons/Cancer_Epitopes_CSHL/blob/master/doc/Docker.md)
