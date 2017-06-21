@@ -8,7 +8,7 @@ This tool finds already known viral sequences and viruses-like proteins and disc
 
 * [Introduction](#Introduction)
 
-* [Command Line Interface Usage](#Command Line Interface Usage)
+* [Command Line Interface Usage](#Command-Line-Interface-Usage)
 
 * [Workflow schematics](#Workflow schematics)
 
