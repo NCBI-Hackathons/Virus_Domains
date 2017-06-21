@@ -1,8 +1,9 @@
 
 # VIROME SNIFF
+
 A NCBI Hackathon Project Generating a Pipeline that searches Next Generation Sequencing reads using virus protein database. 
 This tool finds already known viral sequences and viruses-like proteins and discovers sequences that match Viral Protein Domains in any single genome or metagenome sequence pool. Initial development took place at New York Genome Center, June 19-21, 2017.
-=================================================================
+
 
 
 * [Introduction](#Introduction)
@@ -16,7 +17,6 @@ This tool finds already known viral sequences and viruses-like proteins and disc
 * [Sample Input Files](#Software Dependencies)
 * [Resources and references](#Resources-and-references) 
  
---------------------------------------
 
 
 ## Introduction
