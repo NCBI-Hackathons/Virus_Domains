@@ -20,9 +20,10 @@ This tool finds already known viral sequences and viruses-like proteins and disc
 
 
 ## Background
-We aimed to search for viruses in protein, rather than nucleotide space in order to capture and caracterize larger number of viruses and detec virus- associated domains in the sample.  
+We aimed to search for viruses in protein, rather than nucleotide space in order to capture and characterize larger number of viruses and detect virus- associated domains in the sample.  
+ 
+Once we have taken in any Illumina base next generation sequencing datasets (and performed adapter trimming), the workflow takes FASTQ data reads  where the input genomic data is matched directly against viral protein database in order to filter out all the other sequences that are not related to viruses. The workflow further takes virus- related sequences and an assembly of those reads is performed. All the contigs that we successfully assembled are further characterized into known virus proteins, homologous virus proteins, and as virus protein domains. Know and homologous virus proteins are quantified and plotted, and taxonomical classification of those sequences is provided. Finally, samples geographical distribution and representation can be plotted on the map. 
 
-Once we have taken in any Illumina base next generatin sequenceing datasets (and performed adapter trimming), the workflow takes FASTQ data reads  where the input genomic data is matched directly against viaral protein database in order to filter out all the other sequnces that ae not related to viruses. The workflow further takes virus- related seqeunces and an assembly of those reads is performed. All the contigs that we sucessfuly assebled are furhter characterzed into known virus proteins, homologous virus proteins, and as virus protein domains. Know and homologus virus proteins are quntified and plotted, and taxonomical clasification of those sequences is provided. Finally, samples geographical distribution and representaiton can be plotted on the map. 
 
 
 ## Command Line Interface Usage
